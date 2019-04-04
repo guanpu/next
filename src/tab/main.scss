@@ -164,14 +164,13 @@
     /* shape: pure */
     /* ----------------- */
     &-pure > #{$tab-prefix}-bar {
-        border-bottom: $tab-pure-divider-line;
         background-color: $tab-pure-bg-color;
 
         #{$tab-prefix}-nav-container {
-            margin-bottom: -$tab-pure-divider-line-width;
             box-shadow: $tab-pure-divider-shadow;
 
             #{$tab-prefix}-tab {
+                border-bottom: $tab-pure-divider-line;
                 @include tabs-tab-statement(
                     $tab-pure-text-color-normal, // text color
                     $tab-pure-text-color-hover,
@@ -183,13 +182,34 @@
                     transparent
                 );
 
-                @include tabs-tab-inkbar(
-                    $tab-pure-ink-bar-width,
-                    $tab-pure-ink-bar-color,
-                    0%,
-                    0%,
-                    'bottom'
-                );
+                &:before {
+                    border-radius: 0;
+                    border-top: $tab-pure-active-top-width solid $tab-pure-ink-bar-color;
+                    top: 0;
+                    width: 0;
+                    border-bottom: $tab-pure-ink-bar-width solid $tab-pure-ink-bar-color;
+                    left: 50%;
+                    bottom: 0;
+                    margin-bottom: -$tab-pure-divider-line-width;
+                }
+                &.active {
+                    border-bottom: none;
+                    border-left: $tab-pure-tab-side-broder;
+                    border-right: $tab-pure-tab-side-broder;
+                    /* stylelint-disable */
+                    &:before {
+                        width: 100%;
+                        left: 0;
+                    }
+                    /* stylelint-enable */
+                }
+
+                &.active:first-child {
+                    border-left: none;
+                }
+                &.active:last-child {
+                    border-right: none;
+                }
             }
         }
     }

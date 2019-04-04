@@ -132,9 +132,17 @@ $tab-nav-arrow-color-disabled: $color-line1-2 !default;
 /// @namespace size/nav
 $tab-pure-divider-line-width: $line-1 !default;
 
-/// active line
+/// active line bottom
 /// @namespace size/tab
 $tab-pure-ink-bar-width: $line-2 !default;
+
+/// active line top
+/// @namespace size/tab
+$tab-pure-active-top-width: $line-zero !default;
+
+/// side border
+/// @namespace size/tab
+$tab-pure-tab-border-width: $line-zero !default;
 
 // Statement
 
@@ -162,6 +170,14 @@ $tab-pure-text-color-disabled: $color-line1-2 !default;
 /// @namespace statement/selected/tab
 $tab-pure-ink-bar-color: $color-brand1-6 !default;
 
+/// active line position
+/// @namespace size/tab
+$tab-pure-tab-active-position: 'bottom' !default;
+
+/// side border
+/// @namespace size/tab
+$tab-pure-tab-border-width: $line-zero !default;
+
 /// divider color
 /// @namespace statement/normal/nav
 $tab-pure-divider-border-color: $color-line1-2 !default;
@@ -175,6 +191,10 @@ $tab-pure-divider-shadow: $shadow-zero !default;
 // unconfigurable
 // divider line
 $tab-pure-divider-line: $tab-pure-divider-border-style $tab-pure-divider-line-width $tab-pure-divider-border-color;
+
+// unconfigurable
+// active side border
+$tab-pure-tab-side-broder: $tab-pure-tab-border-width solid $tab-pure-divider-border-color;
 
 // Shape: Wrapped
 // -----------------

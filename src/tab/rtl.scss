@@ -55,5 +55,15 @@
         left: $tab-nav-arrow-down-positon-right;
         right: auto;
     }
+    &#{$tab-prefix}-pure > #{$tab-prefix}-bar {
+        #{$tab-prefix}-tab.active:first-child {
+            border-right: none;
+            border-left: $tab-pure-tab-side-broder;
+        }
+        #{$tab-prefix}-tab.active:last-child {
+            border-left: none;
+            border-right: $tab-pure-tab-side-broder;
+        }
+    }
 }
 
