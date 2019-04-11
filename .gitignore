@@ -31,14 +31,11 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
 
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # TypeScript v1 declaration files
-typings/
 
 # Optional npm cache directory
 .npm
@@ -59,26 +56,16 @@ typings/
 .env
 
 # next.js build output
-.next
-next/
 
 # special demo file for locally reappear issue
 docs/**/demo/issues.md
 
 precss.css
 .sass-cache/
-scripts/server-remote
 __html/
-dist/
-es/
-lib/
 test/coverage/
 test/**/coverage/
-compiled_docs/
-demos/
-platform-docs/
 coverage/
-docs-lang/
 gemini-report/
 .idea/
 .vscode/
