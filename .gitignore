@@ -59,8 +59,6 @@ typings/
 .env
 
 # next.js build output
-.next
-next/
 
 # special demo file for locally reappear issue
 docs/**/demo/issues.md
@@ -69,16 +67,10 @@ precss.css
 .sass-cache/
 scripts/server-remote
 __html/
-dist/
-es/
-lib/
 test/coverage/
 test/**/coverage/
-compiled_docs/
-demos/
 platform-docs/
 coverage/
-docs-lang/
 gemini-report/
 .idea/
 .vscode/
